@@ -5,26 +5,37 @@
 //  Created by simon on 2024/1/20.
 //
 
-import Cocoa
+import UIKit
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow? = nil
 
-    
 
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-
-    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        self.window = setupWindow()
+        self.window?.makeKeyAndVisible()
+        configScrollViewAdjustSafeArea()
+        
         return true
     }
+    
+    
+    func setupWindow()->UIWindow{
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let VC = ViewController()
+        let navC = UINavigationController(rootViewController: VC)
+        window.rootViewController = navC
+        return window
+    }
 
+    func configScrollViewAdjustSafeArea(){
+        // 设置全局的 contentInsetAdjustmentBehavior
+           if #available(iOS 11.0, *) {
+               UIScrollView.appearance().contentInsetAdjustmentBehavior = .automatic
+           }
+    }
 
 }
 
