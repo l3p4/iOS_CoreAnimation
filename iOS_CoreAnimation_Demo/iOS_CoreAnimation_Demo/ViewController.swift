@@ -12,6 +12,7 @@ import SnapKit
 class ViewController: UIViewController {
     
     let cellId = "ViewControllerCell"
+    let dataSource = ["CALayerKnowledgeVC","BaseAnimationVC","CALayer"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,6 @@ class ViewController: UIViewController {
         tableV.dataSource = self
         tableV.delegate = self
         return tableV
-        
     }()
 
 }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
 
 extension ViewController:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,14 +54,23 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate{
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = "123"
+        cell.textLabel?.text = dataSource[indexPath.row]
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let baseVC = BaseAnimationVC()
-        navigationController?.pushViewController(baseVC, animated: true)
+        
+        let className = self.dataSource[indexPath.row]
+        let classType1: AnyClass? = NSClassFromString(className)
+//        let classType2:AnyClass? =
+        
+        if let classType = NSClassFromString(className) as? UIViewController.Type{
+            
+            let vc = classType.init()
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
 }

@@ -10,6 +10,7 @@
 		342B1254C74789D2ABBD8D12 /* Pods_iOS_CoreAnimation_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B02DDE6EC060A6C21F77ABCC /* Pods_iOS_CoreAnimation_Demo.framework */; };
 		B7E4A3E9B1550EF17C3FFBD2 /* Pods_iOS_CoreAnimation_Demo_iOS_CoreAnimation_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7D8A637246722F9950F44B /* Pods_iOS_CoreAnimation_Demo_iOS_CoreAnimation_DemoUITests.framework */; };
 		B9B9E8AED21ECB50B2CBFCCF /* Pods_iOS_CoreAnimation_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A2BC732DCA1B42F8DBCC2 /* Pods_iOS_CoreAnimation_DemoTests.framework */; };
+		F4659C852B64D54700141B09 /* BasicKnowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4659C842B64D54700141B09 /* BasicKnowledgeVC.swift */; };
 		F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E96F2B5BC05700978BCC /* AppDelegate.swift */; };
 		F471E9742B5BC05700978BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9732B5BC05700978BCC /* ViewController.swift */; };
 		F471E9792B5BC05800978BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F471E9782B5BC05800978BCC /* Assets.xcassets */; };
@@ -17,9 +18,11 @@
 		F471E9872B5BC05900978BCC /* iOS_CoreAnimation_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9862B5BC05900978BCC /* iOS_CoreAnimation_DemoTests.swift */; };
 		F471E9912B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9902B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.swift */; };
 		F471E9932B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9922B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift */; };
+		F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */; };
 		F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */; };
 		F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */; };
 		F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */; };
+		F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E92B5BDF900053D1B3 /* UIView+Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,7 @@
 		A4D3EE7FE4AEE2907A2D9CC3 /* Pods-iOS_CoreAnimation_DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CoreAnimation_DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CoreAnimation_DemoTests/Pods-iOS_CoreAnimation_DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B02DDE6EC060A6C21F77ABCC /* Pods_iOS_CoreAnimation_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_CoreAnimation_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7708D166A141E28D3B25221 /* Pods-iOS_CoreAnimation_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CoreAnimation_Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CoreAnimation_Demo/Pods-iOS_CoreAnimation_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		F4659C842B64D54700141B09 /* BasicKnowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicKnowledgeVC.swift; sourceTree = "<group>"; };
 		F471E96C2B5BC05700978BCC /* iOS_CoreAnimation_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_CoreAnimation_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F471E96F2B5BC05700978BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F471E9732B5BC05700978BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,9 +63,11 @@
 		F471E98C2B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_CoreAnimation_DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F471E9902B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreAnimation_DemoUITests.swift; sourceTree = "<group>"; };
 		F471E9922B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreAnimation_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerKnowledgeVC.swift; sourceTree = "<group>"; };
 		F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALength.swift; sourceTree = "<group>"; };
 		F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationVC.swift; sourceTree = "<group>"; };
+		F4DCB1E92B5BDF900053D1B3 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		F69DCF603E3574A849764EE5 /* Pods-iOS_CoreAnimation_Demo-iOS_CoreAnimation_DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CoreAnimation_Demo-iOS_CoreAnimation_DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-iOS_CoreAnimation_Demo-iOS_CoreAnimation_DemoUITests/Pods-iOS_CoreAnimation_Demo-iOS_CoreAnimation_DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,11 +136,14 @@
 			children = (
 				F471E96F2B5BC05700978BCC /* AppDelegate.swift */,
 				F471E9732B5BC05700978BCC /* ViewController.swift */,
+				F4659C842B64D54700141B09 /* BasicKnowledgeVC.swift */,
 				F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */,
+				F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */,
 				F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */,
 				F471E9782B5BC05800978BCC /* Assets.xcassets */,
 				F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */,
 				F471E97D2B5BC05900978BCC /* Info.plist */,
+				F4DCB1E82B5BDF4F0053D1B3 /* Tools */,
 				F4DCB1DF2B5BD1E00053D1B3 /* Define */,
 			);
 			path = iOS_CoreAnimation_Demo;
@@ -163,6 +172,14 @@
 				F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */,
 			);
 			path = Define;
+			sourceTree = "<group>";
+		};
+		F4DCB1E82B5BDF4F0053D1B3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F4DCB1E92B5BDF900053D1B3 /* UIView+Frame.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		F7B188097E058FF83B578AE9 /* Pods */ = {
@@ -417,8 +434,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F471E9742B5BC05700978BCC /* ViewController.swift in Sources */,
+				F4659C852B64D54700141B09 /* BasicKnowledgeVC.swift in Sources */,
 				F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */,
+				F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */,
 				F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */,
+				F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */,
 				F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */,
 				F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */,
 			);
