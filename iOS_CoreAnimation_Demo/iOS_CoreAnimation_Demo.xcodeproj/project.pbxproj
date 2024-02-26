@@ -20,8 +20,8 @@
 		F471E9932B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9922B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift */; };
 		F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */; };
 		F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */; };
-		F4AC50C02B8C33FF0066114C /* TestInilitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50BF2B8C33FF0066114C /* TestInilitial.swift */; };
 		F4AC50C52B8C3FB10066114C /* CATransfrom3DVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */; };
+		F4AC50D52B8CA3BB0066114C /* UIColor+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50D42B8CA3BB0066114C /* UIColor+random.swift */; };
 		F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */; };
 		F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */; };
 		F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */; };
@@ -69,8 +69,8 @@
 		F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerKnowledgeVC.swift; sourceTree = "<group>"; };
 		F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerTreeVC.swift; sourceTree = "<group>"; };
 		F4AC50BB2B8C27C80066114C /* iOS_CoreAnimation_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_CoreAnimation_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4AC50BF2B8C33FF0066114C /* TestInilitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInilitial.swift; sourceTree = "<group>"; };
 		F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransfrom3DVC.swift; sourceTree = "<group>"; };
+		F4AC50D42B8CA3BB0066114C /* UIColor+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+random.swift"; sourceTree = "<group>"; };
 		F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALength.swift; sourceTree = "<group>"; };
 		F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationVC.swift; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 				F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */,
 				F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */,
 				F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */,
-				F4AC50BF2B8C33FF0066114C /* TestInilitial.swift */,
 				F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */,
 				F471E9782B5BC05800978BCC /* Assets.xcassets */,
 				F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */,
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				F4DCB1E92B5BDF900053D1B3 /* UIView+Frame.swift */,
+				F4AC50D42B8CA3BB0066114C /* UIColor+random.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -446,10 +446,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F471E9742B5BC05700978BCC /* ViewController.swift in Sources */,
+				F4AC50D52B8CA3BB0066114C /* UIColor+random.swift in Sources */,
 				F4659C852B64D54700141B09 /* BasicKnowledgeVC.swift in Sources */,
 				F4AC50C52B8C3FB10066114C /* CATransfrom3DVC.swift in Sources */,
 				F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */,
-				F4AC50C02B8C33FF0066114C /* TestInilitial.swift in Sources */,
 				F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */,
 				F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */,
 				F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */,
