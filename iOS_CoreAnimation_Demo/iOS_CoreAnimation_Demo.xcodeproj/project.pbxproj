@@ -19,6 +19,9 @@
 		F471E9912B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9902B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.swift */; };
 		F471E9932B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9922B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift */; };
 		F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */; };
+		F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */; };
+		F4AC50C02B8C33FF0066114C /* TestInilitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50BF2B8C33FF0066114C /* TestInilitial.swift */; };
+		F4AC50C52B8C3FB10066114C /* CATransfrom3DVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */; };
 		F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */; };
 		F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */; };
 		F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */; };
@@ -64,6 +67,10 @@
 		F471E9902B5BC05900978BCC /* iOS_CoreAnimation_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreAnimation_DemoUITests.swift; sourceTree = "<group>"; };
 		F471E9922B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreAnimation_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerKnowledgeVC.swift; sourceTree = "<group>"; };
+		F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerTreeVC.swift; sourceTree = "<group>"; };
+		F4AC50BB2B8C27C80066114C /* iOS_CoreAnimation_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_CoreAnimation_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4AC50BF2B8C33FF0066114C /* TestInilitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInilitial.swift; sourceTree = "<group>"; };
+		F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransfrom3DVC.swift; sourceTree = "<group>"; };
 		F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		F4DCB1E22B5BD1EF0053D1B3 /* CALength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALength.swift; sourceTree = "<group>"; };
 		F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationVC.swift; sourceTree = "<group>"; };
@@ -139,12 +146,16 @@
 				F4659C842B64D54700141B09 /* BasicKnowledgeVC.swift */,
 				F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */,
 				F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */,
+				F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */,
+				F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */,
+				F4AC50BF2B8C33FF0066114C /* TestInilitial.swift */,
 				F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */,
 				F471E9782B5BC05800978BCC /* Assets.xcassets */,
 				F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */,
 				F471E97D2B5BC05900978BCC /* Info.plist */,
 				F4DCB1E82B5BDF4F0053D1B3 /* Tools */,
 				F4DCB1DF2B5BD1E00053D1B3 /* Define */,
+				F4AC50BB2B8C27C80066114C /* iOS_CoreAnimation_Demo-Bridging-Header.h */,
 			);
 			path = iOS_CoreAnimation_Demo;
 			sourceTree = "<group>";
@@ -268,6 +279,7 @@
 				TargetAttributes = {
 					F471E96B2B5BC05700978BCC = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 					F471E9812B5BC05900978BCC = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -435,8 +447,11 @@
 			files = (
 				F471E9742B5BC05700978BCC /* ViewController.swift in Sources */,
 				F4659C852B64D54700141B09 /* BasicKnowledgeVC.swift in Sources */,
+				F4AC50C52B8C3FB10066114C /* CATransfrom3DVC.swift in Sources */,
 				F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */,
+				F4AC50C02B8C33FF0066114C /* TestInilitial.swift in Sources */,
 				F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */,
+				F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */,
 				F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */,
 				F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */,
 				F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */,
@@ -608,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Z6W9BH623;
@@ -630,6 +646,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_CoreAnimation_Demo/iOS_CoreAnimation_Demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -641,6 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Z6W9BH623;
@@ -663,6 +682,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS_CoreAnimation_Demo/iOS_CoreAnimation_Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

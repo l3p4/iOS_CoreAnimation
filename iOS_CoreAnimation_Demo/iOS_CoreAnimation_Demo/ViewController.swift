@@ -12,7 +12,7 @@ import SnapKit
 class ViewController: UIViewController {
     
     let cellId = "ViewControllerCell"
-    let dataSource = ["CALayerKnowledgeVC","BaseAnimationVC","CALayer"]
+    let dataSource = ["CALayerKnowledgeVC","BaseAnimationVC","LayerTreeVC","CATransfrom3DVC"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

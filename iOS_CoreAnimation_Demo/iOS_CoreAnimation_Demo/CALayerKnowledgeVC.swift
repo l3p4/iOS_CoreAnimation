@@ -11,16 +11,24 @@ import UIKit
 @objc(CALayerKnowledgeVC)
  @objcMembers class CALayerKnowledgeVC:UIViewController{
      
-     var displayLink:CADisplayLink?
      
-     deinit {
-         displayLink?.invalidate()
-         displayLink = nil
-     }
      
      lazy var view1:UIView = {
-         var view = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+         var view = UIView(frame: CGRect(x: 100, y: 200, width: 200, height: 200))
          view.backgroundColor = .yellow
+         let image = UIImage(named: "1")
+         //用途:可以给UIView设置背景图片
+         view.layer.contents = image?.cgImage
+         view.layer.contentsGravity = .resizeAspectFill
+         //contentMode本质也是设置layer.contentsGravity
+         //view.contentMode = .left
+         //可以设定展示哪一部分的图片,可以用来做类似H5的精灵图,sprite(多张小图拼成一张大图,后按照位置尺寸来裁剪,优化app性能(资源加载,单词渲染,请求次数),减少服务器负担)
+         view.layer.contentsRect = CGRect(x: 0.5, y: 0.5, width: 0.5, height: 0.5)
+         //默认是1,Retina屏正常是2或者3
+         view.layer.contentsScale = UIScreen.main.scale
+         view.layer.masksToBounds = true
+         //实际也是调用layer的masksToBounds
+         view.clipsToBounds = true
          return view
      }()
      
@@ -32,50 +40,34 @@ import UIKit
     }
      
      override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-         beginAnimationOfView1()
-         printLayerPresentationAndModelFrame()
+//         beginAnimationOfView1()
+//         printLayerPresentationAndModelFrame()
          
+//         view1.layer.contentsGravity = .bottomLeft
+         
+         CATransaction.begin()
+         CATransaction.setAnimationDuration(21)
+         
+         CATransaction.setCompletionBlock {
+             self.view1.layer.backgroundColor = UIColor.red.cgColor
+             
+             self.view1.layer.setAffineTransform( CGAffineTransformRotate(self.view1.layer.affineTransform(), .pi/4.0))
+         }
+        
+         CATransaction.commit()
      }
     
-     func printLayerPresentationAndModelFrame(){
-         displayLink = CADisplayLink(target: self, selector: #selector(printFrame(_:)))
-         displayLink?.add(to: .current, forMode: .default)
-         self.perform(#selector(cancelPrint), with: nil, afterDelay: 3)
-     }
-     
-     /*
-      图层树layer tree实际是包括modelTree,presentationTree,renderTree.model层实际就是layer
-      
-      presentation 实时的位置, model是layer赋值的时候存储的. 动画的过程中，可以通过presentation访问动态变化的数据
-      还有一个render
-      presentation:Optional((100.0, 117.97318756580353, 100.0, 100.0))
-      model:(100.0, 100.0, 100.0, 100.0)
-      presentation:Optional((100.0, 118.53112876415253, 100.0, 100.0))
-      model:(100.0, 100.0, 100.0, 100.0)
-      presentation:Optional((100.0, 119.0867081284523, 100.0, 100.0))
-      model:(100.0, 100.0, 100.0, 100.0)
-      presentation:Optional((100.0, 119.63988244533539, 100.0, 100.0))
-      model:(100.0, 100.0, 100.0, 100.0)
-      */
-     @objc func printFrame(_ displayLink:CADisplayLink){
-         let pRect = view1.layer.presentation()?.frame
-         let mRect = view1.layer.model().frame
-         print("presentation:\(String(describing: pRect)) \nmodel:\(mRect)")
-     }
-     
-     @objc func cancelPrint(){
-         displayLink?.invalidate()
-     }
+
     
-     func beginAnimationOfView1(){
-         let basicA = CABasicAnimation(keyPath: "position.y")
-         basicA.fromValue = view1.layer.position.y
-         basicA.toValue = view1.layer.position.y + 100
-         basicA.duration = 3
-         basicA.isRemovedOnCompletion = false
-         basicA.fillMode = .forwards;
-         view1.layer.add(basicA, forKey: "basicAnimation")
-     }
-     
+//     func beginAnimationOfView1(){
+//         let basicA = CABasicAnimation(keyPath: "position.y")
+//         basicA.fromValue = view1.layer.position.y
+//         basicA.toValue = view1.layer.position.y + 100
+//         basicA.duration = 3
+//         basicA.isRemovedOnCompletion = false
+//         basicA.fillMode = .forwards;
+//         view1.layer.add(basicA, forKey: "basicAnimation")
+//     }
+//
      
 }
