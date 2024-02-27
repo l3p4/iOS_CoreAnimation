@@ -11,7 +11,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow? = nil
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = setupWindow()
@@ -24,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupWindow()->UIWindow{
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let VC = ViewController()
+        let VC = EntryVC()
         let navC = UINavigationController(rootViewController: VC)
         window.rootViewController = navC
         return window

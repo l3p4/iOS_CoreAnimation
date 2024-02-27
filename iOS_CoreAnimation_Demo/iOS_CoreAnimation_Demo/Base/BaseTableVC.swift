@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseTableVC.swift
 //  iOS_CoreAnimation_Demo
 //
 //  Created by simon on 2024/1/20.
@@ -9,15 +9,23 @@ import UIKit
 import SnapKit
 
 
-class ViewController: UIViewController {
+class BaseTableVC: UIViewController {
     
-    let cellId = "ViewControllerCell"
-    let dataSource = ["CALayerKnowledgeVC","BaseAnimationVC","LayerTreeVC","CATransfrom3DVC"]
+    let cellId = "BaseTableVCCell"
+    
+    internal var private_data:[TableViewModel]?
+    
+    var dataSource:[TableViewModel] {
+        get{
+            return private_data ?? []
+        }
+        set{
+            self.private_data = newValue
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Entry"
         view.backgroundColor = UIColor.white
         setupSubView()
     }
@@ -44,7 +52,8 @@ class ViewController: UIViewController {
 }
 
 
-extension ViewController:UITableViewDataSource, UITableViewDelegate{
+
+extension BaseTableVC:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
@@ -54,16 +63,14 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate{
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = dataSource[indexPath.row]
+        cell.textLabel?.text = dataSource[indexPath.row].title
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let className = self.dataSource[indexPath.row]
-        let classType1: AnyClass? = NSClassFromString(className)
-//        let classType2:AnyClass? =
+        let className = self.dataSource[indexPath.row].VCName
         
         if let classType = NSClassFromString(className) as? UIViewController.Type{
             
