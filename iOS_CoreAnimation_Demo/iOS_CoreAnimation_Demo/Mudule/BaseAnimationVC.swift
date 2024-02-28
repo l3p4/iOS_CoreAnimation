@@ -24,7 +24,7 @@ import UIKit
     lazy var label:UILabel = {
         let label = UILabel(frame: CGRectMake(100, 100, 100, 100))
         label.text = "1"
-        label.backgroundColor = .green
+        label.backgroundColor = UIColor.green
         label.textAlignment = .center
         return label
     }()

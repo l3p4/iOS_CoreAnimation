@@ -12,6 +12,11 @@
 		B9B9E8AED21ECB50B2CBFCCF /* Pods_iOS_CoreAnimation_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679A2BC732DCA1B42F8DBCC2 /* Pods_iOS_CoreAnimation_DemoTests.framework */; };
 		F465581C2B8CDA77000DEC1B /* EntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465581B2B8CDA77000DEC1B /* EntryVC.swift */; };
 		F465581E2B8CE090000DEC1B /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465581D2B8CE090000DEC1B /* TableViewModel.swift */; };
+		F46558262B8ECBF4000DEC1B /* CATransform3DEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558252B8ECBF4000DEC1B /* CATransform3DEntryVC.swift */; };
+		F465582A2B8ECC94000DEC1B /* CATransform3DNormalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558292B8ECC94000DEC1B /* CATransform3DNormalVC.swift */; };
+		F465582E2B8ECF2E000DEC1B /* MultipleButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465582D2B8ECF2E000DEC1B /* MultipleButtonsView.swift */; };
+		F46558302B8EE58F000DEC1B /* UIColor+tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465582F2B8EE58F000DEC1B /* UIColor+tool.swift */; };
+		F46558322B8EEE21000DEC1B /* CubeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558312B8EEE21000DEC1B /* CubeVC.swift */; };
 		F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E96F2B5BC05700978BCC /* AppDelegate.swift */; };
 		F471E9792B5BC05800978BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F471E9782B5BC05800978BCC /* Assets.xcassets */; };
 		F471E97C2B5BC05900978BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */; };
@@ -20,7 +25,7 @@
 		F471E9932B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E9922B5BC05900978BCC /* iOS_CoreAnimation_DemoUITestsLaunchTests.swift */; };
 		F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */; };
 		F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */; };
-		F4AC50C52B8C3FB10066114C /* CATransfrom3DVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */; };
+		F4AC50C52B8C3FB10066114C /* CATransfrom3DVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50C42B8C3FB10066114C /* CATransfrom3DVC1.swift */; };
 		F4AC50D52B8CA3BB0066114C /* UIColor+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50D42B8CA3BB0066114C /* UIColor+random.swift */; };
 		F4AC50D72B8CD3510066114C /* BaseTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AC50D62B8CD3510066114C /* BaseTableVC.swift */; };
 		F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */; };
@@ -57,6 +62,11 @@
 		E7708D166A141E28D3B25221 /* Pods-iOS_CoreAnimation_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_CoreAnimation_Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOS_CoreAnimation_Demo/Pods-iOS_CoreAnimation_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		F465581B2B8CDA77000DEC1B /* EntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryVC.swift; sourceTree = "<group>"; };
 		F465581D2B8CE090000DEC1B /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		F46558252B8ECBF4000DEC1B /* CATransform3DEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransform3DEntryVC.swift; sourceTree = "<group>"; };
+		F46558292B8ECC94000DEC1B /* CATransform3DNormalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransform3DNormalVC.swift; sourceTree = "<group>"; };
+		F465582D2B8ECF2E000DEC1B /* MultipleButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleButtonsView.swift; sourceTree = "<group>"; };
+		F465582F2B8EE58F000DEC1B /* UIColor+tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+tool.swift"; sourceTree = "<group>"; };
+		F46558312B8EEE21000DEC1B /* CubeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeVC.swift; sourceTree = "<group>"; };
 		F471E96C2B5BC05700978BCC /* iOS_CoreAnimation_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_CoreAnimation_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F471E96F2B5BC05700978BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F471E9782B5BC05800978BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,7 +80,7 @@
 		F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerKnowledgeVC.swift; sourceTree = "<group>"; };
 		F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerTreeVC.swift; sourceTree = "<group>"; };
 		F4AC50BB2B8C27C80066114C /* iOS_CoreAnimation_Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_CoreAnimation_Demo-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransfrom3DVC.swift; sourceTree = "<group>"; };
+		F4AC50C42B8C3FB10066114C /* CATransfrom3DVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransfrom3DVC1.swift; sourceTree = "<group>"; };
 		F4AC50D42B8CA3BB0066114C /* UIColor+random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+random.swift"; sourceTree = "<group>"; };
 		F4AC50D62B8CD3510066114C /* BaseTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableVC.swift; sourceTree = "<group>"; };
 		F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
@@ -131,12 +141,31 @@
 			isa = PBXGroup;
 			children = (
 				F465581B2B8CDA77000DEC1B /* EntryVC.swift */,
-				F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */,
 				F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */,
-				F4AC50C42B8C3FB10066114C /* CATransfrom3DVC.swift */,
+				F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */,
+				F46558222B8EC99B000DEC1B /* CATransform3DVC */,
+				F4AC50C42B8C3FB10066114C /* CATransfrom3DVC1.swift */,
 				F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */,
 			);
 			path = Mudule;
+			sourceTree = "<group>";
+		};
+		F46558222B8EC99B000DEC1B /* CATransform3DVC */ = {
+			isa = PBXGroup;
+			children = (
+				F46558252B8ECBF4000DEC1B /* CATransform3DEntryVC.swift */,
+				F46558312B8EEE21000DEC1B /* CubeVC.swift */,
+				F46558292B8ECC94000DEC1B /* CATransform3DNormalVC.swift */,
+			);
+			path = CATransform3DVC;
+			sourceTree = "<group>";
+		};
+		F465582C2B8ECEEB000DEC1B /* BasicComponent */ = {
+			isa = PBXGroup;
+			children = (
+				F465582D2B8ECF2E000DEC1B /* MultipleButtonsView.swift */,
+			);
+			path = BasicComponent;
 			sourceTree = "<group>";
 		};
 		F471E9632B5BC05700978BCC = {
@@ -166,6 +195,7 @@
 			children = (
 				F471E96F2B5BC05700978BCC /* AppDelegate.swift */,
 				F465581F2B8D9E74000DEC1B /* Base */,
+				F465582C2B8ECEEB000DEC1B /* BasicComponent */,
 				F46558202B8D9EE6000DEC1B /* Mudule */,
 				F471E9782B5BC05800978BCC /* Assets.xcassets */,
 				F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */,
@@ -208,6 +238,7 @@
 				F4DCB1E92B5BDF900053D1B3 /* UIView+Frame.swift */,
 				F4AC50D42B8CA3BB0066114C /* UIColor+random.swift */,
 				F4DCB1DD2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift */,
+				F465582F2B8EE58F000DEC1B /* UIColor+tool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -465,8 +496,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F465581E2B8CE090000DEC1B /* TableViewModel.swift in Sources */,
+				F465582A2B8ECC94000DEC1B /* CATransform3DNormalVC.swift in Sources */,
 				F4AC50D52B8CA3BB0066114C /* UIColor+random.swift in Sources */,
-				F4AC50C52B8C3FB10066114C /* CATransfrom3DVC.swift in Sources */,
+				F46558302B8EE58F000DEC1B /* UIColor+tool.swift in Sources */,
+				F4AC50C52B8C3FB10066114C /* CATransfrom3DVC1.swift in Sources */,
+				F46558322B8EEE21000DEC1B /* CubeVC.swift in Sources */,
 				F4AC50D72B8CD3510066114C /* BaseTableVC.swift in Sources */,
 				F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */,
 				F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */,
@@ -474,8 +508,10 @@
 				F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */,
 				F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */,
 				F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */,
+				F465582E2B8ECF2E000DEC1B /* MultipleButtonsView.swift in Sources */,
 				F465581C2B8CDA77000DEC1B /* EntryVC.swift in Sources */,
 				F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */,
+				F46558262B8ECBF4000DEC1B /* CATransform3DEntryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,10 +48,14 @@ import UIKit
          displayLink?.invalidate()
      }
      /*
-      图层树layer tree实际是包括modelTree,presentationTree,renderTree.model层实际就是layer
+      //https://www.cnblogs.com/breezemist/p/3489326.html
+      https://www.jianshu.com/p/d09e7929f269
+      图层树layerTree分为modelTree,presentationTree,renderTree.
       
-      presentation 实时的位置, model是layer赋值的时候存储的. 动画的过程中，可以通过presentation访问动态变化的数据
-      还有一个render
+      modelTree中的modelLayer实际就是layer,是给layer赋值的时候存储相关属性的模型对象.
+      presentationLayer呈现/表现,在核心动画中,可以通过presentation()访问动态变化的数据
+      还有一个renderTree中的对象,异步绘制,为核心动画私有.
+      
       presentation:Optional((100.0, 117.97318756580353, 100.0, 100.0))
       model:(100.0, 100.0, 100.0, 100.0)
       presentation:Optional((100.0, 118.53112876415253, 100.0, 100.0))
@@ -77,6 +81,4 @@ import UIKit
          basicA.fillMode = .forwards;
          view1.layer.add(basicA, forKey: "basicAnimation")
      }
-     
-     
 }

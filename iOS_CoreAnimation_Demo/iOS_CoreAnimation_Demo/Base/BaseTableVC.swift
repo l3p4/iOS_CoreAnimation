@@ -8,8 +8,8 @@
 import UIKit
 import SnapKit
 
-
-class BaseTableVC: UIViewController {
+@objc(BaseTableVC)
+@objcMembers class BaseTableVC: UIViewController {
     
     let cellId = "BaseTableVCCell"
     
@@ -41,7 +41,7 @@ class BaseTableVC: UIViewController {
     lazy var tableview: UITableView = {
         let tableV:UITableView = UITableView(frame: CGRectZero, style: .plain)
         
-        tableV.separatorStyle = .none
+//        tableV.separatorStyle = .none
         tableV.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
         tableV.dataSource = self
@@ -71,9 +71,8 @@ extension BaseTableVC:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let className = self.dataSource[indexPath.row].VCName
-        
+        let classT = NSClassFromString(className)
         if let classType = NSClassFromString(className) as? UIViewController.Type{
-            
             let vc = classType.init()
             navigationController?.pushViewController(vc, animated: true)
         }

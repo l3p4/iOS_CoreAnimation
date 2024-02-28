@@ -11,8 +11,7 @@ import UIKit
 @objc(CALayerKnowledgeVC)
  @objcMembers class CALayerKnowledgeVC:UIViewController{
      
-     
-     
+     //MARK: - Property & Lazy Load
      lazy var view1:UIView = {
          var view = UIView(frame: CGRect(x: 100, y: 200, width: 200, height: 200))
          view.backgroundColor = .yellow
@@ -32,6 +31,7 @@ import UIKit
          return view
      }()
      
+    //MARK: - Life Circle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
@@ -39,6 +39,7 @@ import UIKit
         
     }
      
+     //MARK: - Event Response
      override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //         beginAnimationOfView1()
 //         printLayerPresentationAndModelFrame()
@@ -56,18 +57,5 @@ import UIKit
         
          CATransaction.commit()
      }
-    
-
-    
-//     func beginAnimationOfView1(){
-//         let basicA = CABasicAnimation(keyPath: "position.y")
-//         basicA.fromValue = view1.layer.position.y
-//         basicA.toValue = view1.layer.position.y + 100
-//         basicA.duration = 3
-//         basicA.isRemovedOnCompletion = false
-//         basicA.fillMode = .forwards;
-//         view1.layer.add(basicA, forKey: "basicAnimation")
-//     }
-//
      
 }

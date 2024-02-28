@@ -1,5 +1,5 @@
 //
-//  CATransfrom3DVC.swift
+//  CATransfrom3DVC11.swift
 //  iOS_CoreAnimation_Demo
 //
 //  Created by simon on 2024/2/26.
@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-@objc(CATransfrom3DVC)
-class CATransfrom3DVC:UIViewController{
+@objc(CATransfrom3DVC1)
+class CATransfrom3DVC1:UIViewController{
     
     lazy var view1:UIView = {
         var view = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
