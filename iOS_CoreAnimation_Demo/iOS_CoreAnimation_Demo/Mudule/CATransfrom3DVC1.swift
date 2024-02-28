@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(CATransfrom3DVC1)
-class CATransfrom3DVC1:UIViewController{
+class CATransfrom3DVC1:BaseVC{
     
     lazy var view1:UIView = {
         var view = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))

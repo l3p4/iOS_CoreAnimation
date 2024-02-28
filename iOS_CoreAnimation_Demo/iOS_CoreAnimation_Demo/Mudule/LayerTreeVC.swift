@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(LayerTreeVC)
- @objcMembers class LayerTreeVC:UIViewController{
+ @objcMembers class LayerTreeVC:BaseVC{
      
      var displayLink:CADisplayLink?
      

@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 @objc(BaseTableVC)
-@objcMembers class BaseTableVC: UIViewController {
+@objcMembers class BaseTableVC: BaseVC {
     
     let cellId = "BaseTableVCCell"
     
@@ -74,6 +74,7 @@ extension BaseTableVC:UITableViewDataSource, UITableViewDelegate{
         let classT = NSClassFromString(className)
         if let classType = NSClassFromString(className) as? UIViewController.Type{
             let vc = classType.init()
+            vc.title = self.dataSource[indexPath.row].title
             navigationController?.pushViewController(vc, animated: true)
         }
         

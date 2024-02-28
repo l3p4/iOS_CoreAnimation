@@ -18,10 +18,11 @@ class EntryVC: BaseTableVC {
                 let model1 = TableViewModel(title: "layer_属性", VCName: "CALayerKnowledgeVC")
                 let model2 = TableViewModel(title: "图层树_LayerTreeVC", VCName: "LayerTreeVC")
                 let model3 = TableViewModel(title: "核心动画_BaseAnimation", VCName: "BaseAnimationVC")
-                
                 let model4 = TableViewModel(title: "CATransfrom3D", VCName: "CATransform3DEntryVC")
-                let tempData  = [model1, model2, model3, model4]
+                let model5 = TableViewModel(title: "各种layer", VCName: "MultipleLayerEntryVC")
+                let tempData  = [model1, model2, model3, model4, model5]
                 self.private_data = tempData
+                
                 return tempData
             }
             return data
@@ -31,8 +32,4 @@ class EntryVC: BaseTableVC {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "Entry"
-    }
 }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(CALayerKnowledgeVC)
- @objcMembers class CALayerKnowledgeVC:UIViewController{
+ @objcMembers class CALayerKnowledgeVC:BaseVC{
      
      //MARK: - Property & Lazy Load
      lazy var view1:UIView = {

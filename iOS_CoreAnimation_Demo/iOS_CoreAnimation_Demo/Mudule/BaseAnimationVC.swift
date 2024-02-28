@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(BaseAnimationVC)
-@objcMembers class BaseAnimationVC:UIViewController{
+@objcMembers class BaseAnimationVC:BaseVC{
     
     //MARK: - Init
     //MARK: - Life Circle

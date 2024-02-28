@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(CATransform3DNormalVC)
-class CATransform3DNormalVC:UIViewController{
+class CATransform3DNormalVC:BaseVC{
     
     lazy var subView1:UIView = {
         var view = UIView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
@@ -51,6 +51,9 @@ class CATransform3DNormalVC:UIViewController{
         
         var transform = CATransform3DMakeRotation(.pi/4, 0, 1, 0)
         self.subView1.layer.transform = transform
+//        CATextLayer
+//        CAEmitterLayer
+//        QuartzCore
     }
     
     //透视投影

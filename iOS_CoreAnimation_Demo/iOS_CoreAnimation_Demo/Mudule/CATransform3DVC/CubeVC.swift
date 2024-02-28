@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 @objc(CubeVC)
-class CubeVC:UIViewController{
+class CubeVC:BaseVC{
     
     //MARK: - Property & Lazy Load
     var isNormalPerspective = true
@@ -58,8 +58,6 @@ class CubeVC:UIViewController{
         }
         
         resetCubViews()
-        
-        
     }
     
     //MARK: - Private Functions
@@ -139,13 +137,13 @@ class CubeVC:UIViewController{
     func changePerspective(){
         isNormalPerspective = !isNormalPerspective
         
-        var isShowCubic = isNormalPerspective
+        let isShowCubic = isNormalPerspective
         var perspective = CATransform3DIdentity;
         
         if(!isShowCubic){
             perspective.m34 = -1.0 / 500.0;
-            perspective = CATransform3DRotate(perspective, -(.pi/4), 1, 0, 0);
-            perspective = CATransform3DRotate(perspective, -(.pi/4), 0, 1, 0);
+            perspective = CATransform3DRotate(perspective, -(.pi/6), 1, 0, 0);
+            perspective = CATransform3DRotate(perspective, -(.pi/6), 0, 1, 0);
         }
         self.cubeContainer.layer.sublayerTransform = perspective;
     }

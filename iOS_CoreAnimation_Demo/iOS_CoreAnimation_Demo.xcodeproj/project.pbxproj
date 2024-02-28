@@ -17,6 +17,12 @@
 		F465582E2B8ECF2E000DEC1B /* MultipleButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465582D2B8ECF2E000DEC1B /* MultipleButtonsView.swift */; };
 		F46558302B8EE58F000DEC1B /* UIColor+tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465582F2B8EE58F000DEC1B /* UIColor+tool.swift */; };
 		F46558322B8EEE21000DEC1B /* CubeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558312B8EEE21000DEC1B /* CubeVC.swift */; };
+		F46558352B8F072F000DEC1B /* MultipleLayerEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558342B8F072F000DEC1B /* MultipleLayerEntryVC.swift */; };
+		F46558372B8F0812000DEC1B /* CAShapeLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558362B8F0812000DEC1B /* CAShapeLayerVC.swift */; };
+		F46558392B8F083F000DEC1B /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558382B8F083F000DEC1B /* BaseVC.swift */; };
+		F465583B2B8F19DA000DEC1B /* CATextLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465583A2B8F19DA000DEC1B /* CATextLayerVC.swift */; };
+		F465583D2B8F24CB000DEC1B /* CATransformLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465583C2B8F24CB000DEC1B /* CATransformLayerVC.swift */; };
+		F465583F2B8F6D67000DEC1B /* CAGradientLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465583E2B8F6D67000DEC1B /* CAGradientLayerVC.swift */; };
 		F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E96F2B5BC05700978BCC /* AppDelegate.swift */; };
 		F471E9792B5BC05800978BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F471E9782B5BC05800978BCC /* Assets.xcassets */; };
 		F471E97C2B5BC05900978BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */; };
@@ -67,6 +73,12 @@
 		F465582D2B8ECF2E000DEC1B /* MultipleButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleButtonsView.swift; sourceTree = "<group>"; };
 		F465582F2B8EE58F000DEC1B /* UIColor+tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+tool.swift"; sourceTree = "<group>"; };
 		F46558312B8EEE21000DEC1B /* CubeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeVC.swift; sourceTree = "<group>"; };
+		F46558342B8F072F000DEC1B /* MultipleLayerEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleLayerEntryVC.swift; sourceTree = "<group>"; };
+		F46558362B8F0812000DEC1B /* CAShapeLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerVC.swift; sourceTree = "<group>"; };
+		F46558382B8F083F000DEC1B /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		F465583A2B8F19DA000DEC1B /* CATextLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATextLayerVC.swift; sourceTree = "<group>"; };
+		F465583C2B8F24CB000DEC1B /* CATransformLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransformLayerVC.swift; sourceTree = "<group>"; };
+		F465583E2B8F6D67000DEC1B /* CAGradientLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerVC.swift; sourceTree = "<group>"; };
 		F471E96C2B5BC05700978BCC /* iOS_CoreAnimation_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_CoreAnimation_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F471E96F2B5BC05700978BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F471E9782B5BC05800978BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +143,7 @@
 		F465581F2B8D9E74000DEC1B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F46558382B8F083F000DEC1B /* BaseVC.swift */,
 				F4AC50D62B8CD3510066114C /* BaseTableVC.swift */,
 				F465581D2B8CE090000DEC1B /* TableViewModel.swift */,
 			);
@@ -144,6 +157,7 @@
 				F4AC50B72B8B52490066114C /* CALayerKnowledgeVC.swift */,
 				F4DCB1E62B5BD3F60053D1B3 /* BaseAnimationVC.swift */,
 				F46558222B8EC99B000DEC1B /* CATransform3DVC */,
+				F46558332B8F071D000DEC1B /* MultipleLayer */,
 				F4AC50C42B8C3FB10066114C /* CATransfrom3DVC1.swift */,
 				F4AC50B92B8B86C40066114C /* LayerTreeVC.swift */,
 			);
@@ -166,6 +180,18 @@
 				F465582D2B8ECF2E000DEC1B /* MultipleButtonsView.swift */,
 			);
 			path = BasicComponent;
+			sourceTree = "<group>";
+		};
+		F46558332B8F071D000DEC1B /* MultipleLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F46558342B8F072F000DEC1B /* MultipleLayerEntryVC.swift */,
+				F46558362B8F0812000DEC1B /* CAShapeLayerVC.swift */,
+				F465583A2B8F19DA000DEC1B /* CATextLayerVC.swift */,
+				F465583C2B8F24CB000DEC1B /* CATransformLayerVC.swift */,
+				F465583E2B8F6D67000DEC1B /* CAGradientLayerVC.swift */,
+			);
+			path = MultipleLayer;
 			sourceTree = "<group>";
 		};
 		F471E9632B5BC05700978BCC = {
@@ -501,17 +527,23 @@
 				F46558302B8EE58F000DEC1B /* UIColor+tool.swift in Sources */,
 				F4AC50C52B8C3FB10066114C /* CATransfrom3DVC1.swift in Sources */,
 				F46558322B8EEE21000DEC1B /* CubeVC.swift in Sources */,
+				F465583B2B8F19DA000DEC1B /* CATextLayerVC.swift in Sources */,
 				F4AC50D72B8CD3510066114C /* BaseTableVC.swift in Sources */,
 				F4DCB1DE2B5BCAAA0053D1B3 /* UIScrollView+Extension.swift in Sources */,
 				F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */,
+				F46558352B8F072F000DEC1B /* MultipleLayerEntryVC.swift in Sources */,
 				F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */,
 				F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */,
 				F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */,
+				F465583F2B8F6D67000DEC1B /* CAGradientLayerVC.swift in Sources */,
+				F46558372B8F0812000DEC1B /* CAShapeLayerVC.swift in Sources */,
 				F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */,
 				F465582E2B8ECF2E000DEC1B /* MultipleButtonsView.swift in Sources */,
+				F465583D2B8F24CB000DEC1B /* CATransformLayerVC.swift in Sources */,
 				F465581C2B8CDA77000DEC1B /* EntryVC.swift in Sources */,
 				F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */,
 				F46558262B8ECBF4000DEC1B /* CATransform3DEntryVC.swift in Sources */,
+				F46558392B8F083F000DEC1B /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
