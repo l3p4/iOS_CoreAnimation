@@ -23,6 +23,9 @@
 		F465583B2B8F19DA000DEC1B /* CATextLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465583A2B8F19DA000DEC1B /* CATextLayerVC.swift */; };
 		F465583D2B8F24CB000DEC1B /* CATransformLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465583C2B8F24CB000DEC1B /* CATransformLayerVC.swift */; };
 		F465583F2B8F6D67000DEC1B /* CAGradientLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F465583E2B8F6D67000DEC1B /* CAGradientLayerVC.swift */; };
+		F46558412B8F782C000DEC1B /* CAReplicatorLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558402B8F782C000DEC1B /* CAReplicatorLayerVC.swift */; };
+		F46558432B8F7F5B000DEC1B /* CAReplicatorSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558422B8F7F5B000DEC1B /* CAReplicatorSubView.swift */; };
+		F46558452B8F8205000DEC1B /* CAEmitterLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46558442B8F8205000DEC1B /* CAEmitterLayerVC.swift */; };
 		F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F471E96F2B5BC05700978BCC /* AppDelegate.swift */; };
 		F471E9792B5BC05800978BCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F471E9782B5BC05800978BCC /* Assets.xcassets */; };
 		F471E97C2B5BC05900978BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F471E97A2B5BC05900978BCC /* LaunchScreen.storyboard */; };
@@ -79,6 +82,9 @@
 		F465583A2B8F19DA000DEC1B /* CATextLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATextLayerVC.swift; sourceTree = "<group>"; };
 		F465583C2B8F24CB000DEC1B /* CATransformLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATransformLayerVC.swift; sourceTree = "<group>"; };
 		F465583E2B8F6D67000DEC1B /* CAGradientLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerVC.swift; sourceTree = "<group>"; };
+		F46558402B8F782C000DEC1B /* CAReplicatorLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorLayerVC.swift; sourceTree = "<group>"; };
+		F46558422B8F7F5B000DEC1B /* CAReplicatorSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAReplicatorSubView.swift; sourceTree = "<group>"; };
+		F46558442B8F8205000DEC1B /* CAEmitterLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAEmitterLayerVC.swift; sourceTree = "<group>"; };
 		F471E96C2B5BC05700978BCC /* iOS_CoreAnimation_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_CoreAnimation_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F471E96F2B5BC05700978BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F471E9782B5BC05800978BCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 				F465583A2B8F19DA000DEC1B /* CATextLayerVC.swift */,
 				F465583C2B8F24CB000DEC1B /* CATransformLayerVC.swift */,
 				F465583E2B8F6D67000DEC1B /* CAGradientLayerVC.swift */,
+				F46558402B8F782C000DEC1B /* CAReplicatorLayerVC.swift */,
+				F46558422B8F7F5B000DEC1B /* CAReplicatorSubView.swift */,
+				F46558442B8F8205000DEC1B /* CAEmitterLayerVC.swift */,
 			);
 			path = MultipleLayer;
 			sourceTree = "<group>";
@@ -533,13 +542,16 @@
 				F4DCB1EA2B5BDF900053D1B3 /* UIView+Frame.swift in Sources */,
 				F46558352B8F072F000DEC1B /* MultipleLayerEntryVC.swift in Sources */,
 				F4AC50BA2B8B86C40066114C /* LayerTreeVC.swift in Sources */,
+				F46558432B8F7F5B000DEC1B /* CAReplicatorSubView.swift in Sources */,
 				F471E9702B5BC05700978BCC /* AppDelegate.swift in Sources */,
 				F4AC50B82B8B52490066114C /* CALayerKnowledgeVC.swift in Sources */,
 				F465583F2B8F6D67000DEC1B /* CAGradientLayerVC.swift in Sources */,
 				F46558372B8F0812000DEC1B /* CAShapeLayerVC.swift in Sources */,
+				F46558452B8F8205000DEC1B /* CAEmitterLayerVC.swift in Sources */,
 				F4DCB1E32B5BD1EF0053D1B3 /* CALength.swift in Sources */,
 				F465582E2B8ECF2E000DEC1B /* MultipleButtonsView.swift in Sources */,
 				F465583D2B8F24CB000DEC1B /* CATransformLayerVC.swift in Sources */,
+				F46558412B8F782C000DEC1B /* CAReplicatorLayerVC.swift in Sources */,
 				F465581C2B8CDA77000DEC1B /* EntryVC.swift in Sources */,
 				F4DCB1E72B5BD3F60053D1B3 /* BaseAnimationVC.swift in Sources */,
 				F46558262B8ECBF4000DEC1B /* CATransform3DEntryVC.swift in Sources */,

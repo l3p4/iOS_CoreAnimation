@@ -35,9 +35,13 @@ class CAGradientLayerVC:BaseVC{
         
         let gradLayer = CAGradientLayer()
         gradLayer.frame = view1.bounds
-        gradLayer.colors = [UIColor.green.cgColor, UIColor.blue.cgColor]
-        gradLayer.startPoint = CGPointMake(0, 0)
-        gradLayer.endPoint = CGPointMake(1, 1)
+        /*colors跟locations分段是匹配的
+         */
+        gradLayer.colors = [UIColor.green.cgColor,
+                            UIColor.blue.cgColor,
+                            UIColor.orange.cgColor
+                            ]
+        gradLayer.locations = [0, 0.5, 0.7]
 
         view1.layer.addSublayer(gradLayer)
     }

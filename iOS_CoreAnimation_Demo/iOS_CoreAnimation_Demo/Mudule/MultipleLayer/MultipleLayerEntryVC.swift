@@ -14,12 +14,16 @@ class MultipleLayerEntryVC:BaseTableVC{
             guard let data = self.private_data else{
                 
                 let model1 = TableViewModel(title: "贝塞尔曲线_CAShapeLayer", VCName: "CAShapeLayerVC")
-                let model2 = TableViewModel(title: "粒子效果_CAEmitterLayer", VCName: "CAEmitterLayerVC")
-                let model3 = TableViewModel(title: "CATextLayer", VCName: "CATextLayerVC")
-                let model4 = TableViewModel(title: "CATransformLayerVC", VCName: "CATransformLayerVC")
-                let model5 = TableViewModel(title: "CAGradientLayer", VCName: "CAGradientLayerVC")
                 
-                let tempData  = [model1, model2, model3, model4, model5]
+                let model2 = TableViewModel(title: "CATextLayer", VCName: "CATextLayerVC")
+                let model3 = TableViewModel(title: "CATransformLayerVC", VCName: "CATransformLayerVC")
+                let model4 = TableViewModel(title: "CAGradientLayer", VCName: "CAGradientLayerVC")
+                let model5 = TableViewModel(title: "CAReplicatorLayerVC", VCName: "CAReplicatorLayerVC")
+                let model6 = TableViewModel(title: "粒子效果_CAEmitterLayer", VCName: "CAEmitterLayerVC")
+                let model7 = TableViewModel(title: "粒子效果_CAEmitterLayer", VCName: "CAEmitterLayerVC")
+                
+                
+                let tempData  = [model1, model2, model3, model4, model5, model6, model7]
                 self.private_data = tempData
                 return tempData
             }
