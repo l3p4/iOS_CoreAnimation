@@ -47,12 +47,7 @@ import UIKit
         btn.frame = CGRectMake(100, 400, 100, 100)
         btn.backgroundColor = .orange
         return btn
-        
-//        let label = UILabel(frame: CGRectMake(100, 100, 100, 100))
-//        label.text = "1"
-//        label.backgroundColor = .green
-//        label.textAlignment = .center
-//        return label
+
     }()
     
     

@@ -11,13 +11,6 @@ import UIKit
 @objc(CACustomTransitionVC)
 class CACustomTransitionVC: BaseVC {
     
-    lazy var newView:CACustomTransNewView = {
-        let newView = CACustomTransNewView(frame: UIScreen.main.bounds)
-        newView.delegate = self
-        newView.backgroundColor = .yellow
-        return newView
-    }()
-    
     lazy var button:UIButton = {
         let btn:UIButton = UIButton(type: .custom)
         view.addSubview(btn)
@@ -35,106 +28,41 @@ class CACustomTransitionVC: BaseVC {
         return btn
     }()
     
+    deinit{
+        navigationController?.delegate = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bringSubviewToFront(button)
-        
-        
+        navigationController?.delegate = self
     }
     
-    func showNewViewWithAnimation() {
-        view.addSubview(newView)
-        //1.创建贝塞尔路径
-        newView.isHidden = false
-        let startBp = UIBezierPath(ovalIn: self.button.frame)
-        let radius = UIScreen.main.bounds.size.height * 1
-        let endBP = UIBezierPath(ovalIn: button.frame.insetBy(dx: -radius, dy: -radius))
-        
-        let startShaper = CAShapeLayer()
-        startShaper.path = startBp.cgPath
-        let endShaper = CAShapeLayer()
-        endShaper.path = endBP.cgPath
-        
-        let baseAnimation = CABasicAnimation(keyPath: "path")
-        baseAnimation.fromValue = startBp.cgPath
-        baseAnimation.toValue = endBP.cgPath
-        baseAnimation.duration = 0.5
-        baseAnimation.setValue("start", forKey: "animationIdentifier")
-        newView.layer.mask = endShaper
-        endShaper.add(baseAnimation, forKey: "path")
-    }
-    
-    
-    func dismissNewViewWithAnimation() {
-        
-        
-        let radius = UIScreen.main.bounds.size.height * 1
-        let startBp = UIBezierPath(ovalIn: newView.button.frame.insetBy(dx: -radius, dy: -radius))
-        let endBP = UIBezierPath(ovalIn: newView.button.frame)
-        
-        let startShaper = CAShapeLayer()
-        startShaper.path = startBp.cgPath
-        let endShaper = CAShapeLayer()
-        endShaper.path = endBP.cgPath
-
-        let baseAnimation = CABasicAnimation(keyPath: "path")
-        baseAnimation.fromValue = startBp.cgPath
-        baseAnimation.toValue = endBP.cgPath
-        baseAnimation.duration = 0.5
-        baseAnimation.delegate = self
-        baseAnimation.setValue("dismiss", forKey: "animationIdentifier")
-        
-        newView.layer.mask = endShaper
-        endShaper.add(baseAnimation, forKey: "path")
-    }
-
     @objc func btnClick(_ btn:UIButton) {
-        showNewViewWithAnimation()
-    }
-    
-}
-    
-    
-extension CACustomTransitionVC:CACustomTransNewViewDelegate{
-    func newViewBtnDidClick(_ button: UIButton) {
-
-        dismissNewViewWithAnimation()
+        let secondVC = CACustomTransSecondVC()
+        navigationController?.pushViewController(secondVC, animated: true)
     }
 }
-    
 
-extension CACustomTransitionVC:CAAnimationDelegate{
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if let id = anim.value(forKey: "animationIdentifier") as? String{
-            
-            switch id {
-            case "dismiss":
-                newView.removeFromSuperview()
-            default:
-                print()
-            }
+
+extension CACustomTransitionVC: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationController.Operation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animator = CustomCircleTransition()
+        if operation == .push {
+            animator.isPush = true
+            return animator
+        }else if (operation) == .pop{
+            animator.isPush = false
+            return animator
         }
+        return nil
     }
-}
     
-//}
 
+}
 
-
-/*
- @available(iOS 7.0, *)
- optional func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning?
-
- 
- @available(iOS 7.0, *)
- optional func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning?
- */
-
-//extension CACustomTransitionVC: UINavigationControllerDelegate{
-//    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//
-//
-//
-//        return nil
-//    }
 

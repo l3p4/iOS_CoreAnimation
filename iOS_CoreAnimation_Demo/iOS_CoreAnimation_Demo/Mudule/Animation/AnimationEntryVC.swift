@@ -20,8 +20,9 @@ class AnimationEntryVC: BaseTableVC {
                 let model3 = TableViewModel(title: "CAKeyFrameAnimation", VCName: "CAKeyFrameAnimationVC")
                 let model4 = TableViewModel(title: "转场动画_CATransaction", VCName: "CATransactionVC")
                 let model5 = TableViewModel(title: "自定义NavCPush转场动画", VCName: "CACustomTransitionVC")
+                let model6 = TableViewModel(title: "动画组-CAAnimationGroup", VCName: "CAAnimationGroupVC")
                 
-                let tempData  = [model1, model2, model3, model4, model5]
+                let tempData  = [model1, model2, model3, model4, model5, model6]
                 self.private_data = tempData
                 
                 return tempData
