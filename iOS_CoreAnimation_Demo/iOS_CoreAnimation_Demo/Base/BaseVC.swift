@@ -14,4 +14,8 @@ class BaseVC:UIViewController{
         super.viewDidLoad()
         view.backgroundColor = .white
     }
+    
+    deinit {
+        print("deinit:\(self)")
+    }
 }

@@ -10,18 +10,37 @@ import UIKit
 
 /*
  CAEmitterLayer粒子动画效果,抖音那种点赞等,火雨等
+ 粒子效果待优化,类似tableview复用机制
  */
 @objc(CAEmitterLayerVC)
 class CAEmitterLayerVC:BaseVC{
     
+    var colorBallLayer:CAEmitterLayer?
+    
+    var emitterCellArray:[CAEmitterCell] = []
+    
+    lazy var circleView:UIView = {
+        let view = UIView(frame: CGRect(x: 150, y: 400, width: 50, height: 50))
+        view.backgroundColor = .green
+        view.layer.cornerRadius = 25
+        
+        return view
+    }()
+    
+    lazy var btnsView:MultipleButtonsView = {
+        let btnsV = MultipleButtonsView(frame: CGRect(x: 0, y: CALength.kScreenHeight - 300.0, width: CALength.kScreenWidth, height: 200), buttonNames: ["开始","停止","自动播放/停止"])
+        btnsV.delegate = self
+        return btnsV
+    }()
+    
+    
     deinit {
         print("CAEmitterLayerVC deinit")
     }
-    
-    var colorBallLayer:CAEmitterLayer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(btnsView)
+        view.addSubview(circleView)
         
         let delayTime: DispatchTimeInterval = .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: .now() + delayTime) {
@@ -46,10 +65,12 @@ class CAEmitterLayerVC:BaseVC{
         // 粒子发射的中心点.
         colorBallLayer.emitterPosition = CGPoint(x:CALength.kScreenWidth-50, y: CALength.kScreenHeight - 50)
         
+        colorBallLayer.emitterPosition = circleView.center
+        
 
         // 2. 设置 Cell(粒子的样式)
         let imageNames = ["1", "2", "3", "4"]
-        var cellArray:[CAEmitterCell] = []
+        
         for i in 0..<imageNames.count{
             
             let colorBallCell = CAEmitterCell()
@@ -94,10 +115,31 @@ class CAEmitterLayerVC:BaseVC{
             colorBallCell.blueSpeed = 1.0
             colorBallCell.alphaRange = -0.1
             
-            cellArray.append(colorBallCell)
+            emitterCellArray.append(colorBallCell)
         }
 
-        colorBallLayer.emitterCells = cellArray
+        
+    }
+    
+    func emitterFire(){
+        setupEmitter()
+        for cell in emitterCellArray{
+            cell.birthRate = 2
+        }
+        colorBallLayer?.emitterCells = emitterCellArray
+    }
+    
+    
+    func emitterStop(){
+        
+        colorBallLayer?.emitterCells = []
+        colorBallLayer?.removeAllAnimations()
+        
+        for cell in emitterCellArray{
+            cell.birthRate = 0
+        }
+        emitterCellArray.removeAll()
+        colorBallLayer?.removeAllAnimations()
     }
     
     
@@ -125,5 +167,21 @@ class CAEmitterLayerVC:BaseVC{
         UIGraphicsEndImageContext()
         
         return circularImage
+    }
+}
+
+//MARK: - Delegate
+extension CAEmitterLayerVC:MultipleButtonsViewDelegate{
+    
+    func didClickBtn(btn: UIButton) {
+        if(btn.tag == 0){
+            emitterFire()
+        }else if(btn.tag == 1){
+            emitterStop()
+        }else if(btn.tag == 2){
+            
+        }else if(btn.tag == 3){
+            
+        }
     }
 }

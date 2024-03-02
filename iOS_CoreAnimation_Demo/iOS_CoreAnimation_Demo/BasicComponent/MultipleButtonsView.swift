@@ -42,9 +42,10 @@ class MultipleButtonsView:UIView{
             btn.setTitle(name, for: .normal)
             btn.setTitleColor(.white, for: .normal)
             btn.backgroundColor = UIColor(hexString: "0x00C78C")
+            btn.setTitleColor(.blue, for: .highlighted)
             
             btn.layer.cornerRadius = 8.0
-            btn.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+            btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
             btn.titleLabel?.adjustsFontSizeToFitWidth = true
             
             

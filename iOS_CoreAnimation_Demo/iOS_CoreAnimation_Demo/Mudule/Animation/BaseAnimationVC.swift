@@ -11,14 +11,6 @@ import UIKit
 @objc(BaseAnimationVC)
 @objcMembers class BaseAnimationVC:BaseVC{
     
-    //MARK: - Init
-    //MARK: - Life Circle
-    //MARK: - Property & Lazy Load
-    //MARK: - Public Functions
-    //MARK: - Private Functions
-    //MARK: - Delegate
-    //MARK: - Data Request
-    
     
     //MARK:  Property
     lazy var label:UILabel = {
@@ -36,14 +28,6 @@ import UIKit
         layer2.backgroundColor = UIColor.red.cgColor
         return layer2
     }()
-    
-//
-//    override class func load() {
-//
-//    }
-//    override class func initialize() {
-//
-//    }
     
     
     override func loadView() {
@@ -83,8 +67,6 @@ import UIKit
         view.addSubview(btn)
         view.layer.addSublayer(layer1)
     }
-
-
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        let animation = CABasicAnimation(keyPath: "position.y")
